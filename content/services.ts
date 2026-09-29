@@ -1,0 +1,58 @@
+export const services = [
+  {
+    id: 1,
+    title: "Reels & Shorts Editing",
+    description: "High-impact vertical videos optimized for Instagram Reels, YouTube Shorts, and TikTok.",
+    features: [
+      "Professional cuts and transitions",
+      "Trending audio and sound design",
+      "Captions and text overlays",
+      "Platform-specific optimization",
+    ],
+    turnaround: "48H",
+    platforms: ["Reels", "Shorts", "TikTok"],
+    popular: true,
+  },
+  {
+    id: 2,
+    title: "YouTube Long-Form Editing",
+    description: "Engaging long-form content with intros, outros, B-roll, and polished storytelling.",
+    features: [
+      " cinematic intros and outros",
+      "B-roll integration",
+      "Color grading and sound design",
+      "Thumbnail strategy included",
+    ],
+    turnaround: "72H",
+    platforms: ["YouTube", "Long-form"],
+    popular: false,
+  },
+  {
+    id: 3,
+    title: "Thumbnail & Cover Design",
+    description: "Click-worthy thumbnails that drive views and engagement for your content.",
+    features: [
+      "High-contrast designs",
+      "Face and emotion focus",
+      "A/B testing variations",
+      "Brand-consistent style",
+    ],
+    turnaround: "24H",
+    platforms: ["YouTube", "Thumbnails"],
+    popular: false,
+  },
+  {
+    id: 4,
+    title: "Content Mentorship",
+    description: "1-on-1 guidance on content strategy, posting schedules, and audience growth.",
+    features: [
+      "Personalized content strategy",
+      "Posting schedule optimization",
+      "Audience growth tactics",
+      "Brand voice development",
+    ],
+    turnaround: "Ongoing",
+    platforms: ["Strategy", "Mentorship"],
+    popular: false,
+  },
+];

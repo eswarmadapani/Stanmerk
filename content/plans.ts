@@ -1,0 +1,47 @@
+export const plans = [
+  {
+    name: "Starter",
+    price: "₹15,000",
+    unit: "/month",
+    blurb: "Perfect for creators just starting out with consistent content.",
+    features: [
+      "8 Reels/Shorts per month",
+      "48H turnaround",
+      "2 revision rounds",
+      "Basic captions",
+      "Email support",
+    ],
+    popular: false,
+    cta: { label: "Book an Appointment", href: "/contact-us" },
+  },
+  {
+    name: "Scale",
+    price: "₹35,000",
+    unit: "/month",
+    blurb: "For creators ready to grow their audience rapidly.",
+    features: [
+      "20 Reels/Shorts per month",
+      "48H turnaround",
+      "Unlimited revisions",
+      "Advanced captions + sound design",
+      "Priority support",
+    ],
+    popular: true,
+    cta: { label: "Book an Appointment", href: "/contact-us" },
+  },
+  {
+    name: "Custom",
+    price: "Let's talk",
+    unit: "",
+    blurb: "Tailored solutions for established brands and agencies.",
+    features: [
+      "Custom video volume",
+      "Dedicated editor",
+      "Unlimited revisions",
+      "Strategy consultation",
+      "24/7 support",
+    ],
+    popular: false,
+    cta: { label: "Book an Appointment", href: "/contact-us" },
+  },
+];
