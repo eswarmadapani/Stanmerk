@@ -54,7 +54,10 @@ html {
 
 /* Marquee animations */
 @keyframes marquee-x {
-  to {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
     transform: translateX(-50%);
   }
 }
@@ -69,6 +72,7 @@ html {
   display: flex;
   width: max-content;
   animation: marquee-x var(--dur, 40s) linear infinite;
+  will-change: transform;
 }
 
 .marquee-track-y {

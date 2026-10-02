@@ -56,12 +56,12 @@ export function FeaturedWork() {
   }, [activeVideoIndex, togglePlayPause]);
 
   return (
-    <section id="featured-work" data-theme="dark" className="hero-glow py-24 md:py-32 lg:py-40">
-      <div className="container-x px-6 text-[var(--color-surface)]">
+    <section id="featured-work" data-theme="dark" className="hero-glow py-20 md:py-28 lg:py-32">
+      <div className="container-x px-5 sm:px-6 text-[var(--color-surface)]">
         <Reveal>
           <SectionHeader
             eyebrow="Featured work"
-            title={["Real results. ", { text: "Real brands.", accent: true }]}
+            title={[`Real results. `, { text: `Real brands.`, accent: true }]}
             align="left"
             eyebrowTone="dark"
           />
@@ -70,7 +70,7 @@ export function FeaturedWork() {
         <Reveal delay={0.2}>
           <BlueprintFrame className="mt-12">
             {/* Three Portrait Video Cards - 9:16 ratio */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center max-w-5xl mx-auto">
               {work.cases.map((caseItem, index) => {
                 const isPlaying = activeVideoIndex === index;
                 const isHovered = hoveredVideoIndex === index;
@@ -79,7 +79,7 @@ export function FeaturedWork() {
                 return (
                   <div
                     key={index}
-                    className="relative aspect-[9/16] w-full max-w-md rounded-[20px] overflow-hidden bg-[var(--color-dark-card)]"
+                    className="relative w-full max-w-sm aspect-[9/16] rounded-[20px] overflow-hidden bg-[var(--color-dark-card)]"
                     onMouseEnter={() => setHoveredVideoIndex(index)}
                     onMouseLeave={() => setHoveredVideoIndex(null)}
                     onClick={() => handleVideoCardClick(index)}
@@ -109,24 +109,24 @@ export function FeaturedWork() {
                           e.stopPropagation();
                           togglePlayPause(index);
                         }}
-                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-16 h-16 rounded-full bg-[var(--color-surface)]/20 hover:bg-[var(--color-surface)]/30 backdrop-blur-sm transition-all duration-300 text-[var(--color-surface)] border border-[var(--color-surface)]/30 hover:scale-110"
+                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center w-12 h-12 rounded-full bg-[var(--color-surface)]/20 hover:bg-[var(--color-surface)]/30 backdrop-blur-sm transition-all duration-300 text-[var(--color-surface)] border border-[var(--color-surface)]/30 hover:scale-105"
                         aria-label={isPlaying ? "Pause video" : "Play video"}
                       >
                         {isPlaying ? (
-                          <Pause className="h-8 w-8" />
+                          <Pause className="h-6 w-6" />
                         ) : (
-                          <Play className="h-8 w-8 ml-1" />
+                          <Play className="h-6 w-6 ml-0.5" />
                         )}
                       </button>
                     )}
 
                     {/* Bottom Info Overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[var(--color-ink)] via-[var(--color-ink)]/70 to-transparent p-4 z-10">
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[var(--color-ink)] via-[var(--color-ink)]/70 to-transparent p-3 z-10">
                       <div className="text-xs text-[var(--color-muted)] mb-1">{caseItem.category}</div>
                       <div className="font-display text-lg font-semibold text-[var(--color-surface)]">
                         {caseItem.title}
                       </div>
-                      <div className="flex gap-2 mt-2">
+                      <div className="flex gap-1.5 mt-2">
                         <div className="flex items-center gap-1 text-xs text-[var(--color-muted)]">
                           <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-muted)]" />
                           {caseItem.views}

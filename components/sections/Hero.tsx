@@ -10,17 +10,17 @@ export function Hero() {
   return (
     <section
       data-theme="dark"
-      className="hero-glow relative flex min-h-[760px] items-center overflow-hidden py-24 md:min-h-[900px] md:py-32"
+      className="hero-glow relative flex min-h-[100svh] items-center overflow-hidden py-20 md:min-h-[900px] md:py-32"
     >
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
         <WebGLShader />
       </div>
 
-      <div className="container-x relative z-10 px-6">
+      <div className="container-x relative z-10 w-full px-5 sm:px-6">
         <div className="grid grid-cols-1 justify-items-center">
           <Reveal>
-            <div className="flex max-w-4xl flex-col items-center space-y-7 text-center lg:space-y-9">
-              <h1 className="max-w-[820px] text-[clamp(3.25rem,8vw,6.5rem)] font-normal leading-[0.9] text-[var(--color-surface)]">
+            <div className="flex max-w-4xl flex-col items-center space-y-6 text-center lg:space-y-9">
+              <h1 className="max-w-[820px] text-[clamp(2rem,7vw,6.5rem)] font-normal leading-[0.95] text-[var(--color-surface)]">
                 {hero.title.map((part, index) =>
                   typeof part === "string" ? (
                     <span key={index} className="block whitespace-nowrap font-ui text-[0.82em] font-light">{part.trim()}</span>
@@ -32,7 +32,9 @@ export function Hero() {
                 )}
               </h1>
 
-              <p className="max-w-xl text-base leading-7 text-[var(--color-muted)] md:text-lg">{hero.subtext}</p>
+              <p className="max-w-xl text-base leading-7 text-[var(--color-muted)] md:text-lg">
+                {hero.subtext}
+              </p>
 
               <div className="flex flex-wrap justify-center gap-3 md:gap-4">
                 {hero.buttons.map((button, index) =>

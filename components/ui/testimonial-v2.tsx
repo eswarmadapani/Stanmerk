@@ -59,23 +59,23 @@ const TestimonialsColumn = (props: {
           ...new Array(2).fill(0).map((_, index) => (
             <React.Fragment key={index}>
               {props.testimonials.map(({ text, image, name, role }, i) => (
-                <motion.li 
+                <motion.li
                   key={`${index}-${i}`}
                   aria-hidden={index === 1 ? "true" : "false"}
                   tabIndex={index === 1 ? -1 : 0}
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.03,
                     y: -8,
                     boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1)",
                     transition: { type: "spring", stiffness: 400, damping: 17 }
                   }}
-                  whileFocus={{ 
+                  whileFocus={{
                     scale: 1.03,
                     y: -8,
                     boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1)",
                     transition: { type: "spring", stiffness: 400, damping: 17 }
                   }}
-                  className="p-8 rounded-[var(--radius-card)] border border-[var(--color-line)] shadow-lg max-w-sm w-full bg-[var(--color-dark-card)] text-[var(--color-surface)] transition-all duration-300 cursor-default select-none group focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/30" 
+                  className="p-8 rounded-[var(--radius-card)] border border-[var(--color-line)] shadow-lg max-w-sm w-full bg-[var(--color-dark-card)] text-[var(--color-surface)] transition-all duration-300 cursor-default select-none group focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/30"
                 >
                   <blockquote className="m-0 p-0">
                     <p className="text-[var(--color-muted)] leading-relaxed font-normal m-0 transition-colors duration-300 text-sm md:text-base">
@@ -102,7 +102,7 @@ const TestimonialsColumn = (props: {
                 </motion.li>
               ))}
             </React.Fragment>
-          )),
+          ))
         ]}
       </motion.ul>
     </div>
@@ -111,42 +111,40 @@ const TestimonialsColumn = (props: {
 
 export function Testimonials() {
   return (
-    <section 
+    <section
       id="testimonials"
       data-theme="dark"
       aria-labelledby="testimonials-heading"
-      className="relative bg-black py-24 md:py-32 lg:py-40 overflow-hidden"
+      className="relative bg-black py-20 md:py-28 lg:py-32 overflow-hidden"
     >
-
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.15 }}
-        transition={{ 
-          duration: 1.2, 
+        transition={{
+          duration: 1.2,
           ease: [0.16, 1, 0.3, 1],
           opacity: { duration: 0.8 }
         }}
-        className="container-x px-6 z-10 mx-auto text-[var(--color-surface)]"
+        className="container-x px-5 sm:px-6 z-10 mx-auto text-[var(--color-surface)]"
       >
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-12">
           <SectionHeader
             eyebrow="Testimonials"
-            title={["What our clients ", { text: "say about us", accent: true }]}
+            title={[`What our clients `, { text: `say about us`, accent: true }]}
             sub="Real feedback from real creators and brands who scaled with our video editing systems."
             align="center"
             eyebrowTone="dark"
           />
         </div>
 
-        <div 
-          className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)] max-h-[740px] overflow-hidden"
+        <div className="flex flex-col items-center gap-4 md:flex-row md:gap-6 mt-8 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)] max-h-[600px] overflow-hidden"
           role="region"
           aria-label="Scrolling Testimonials"
         >
-          <TestimonialsColumn testimonials={firstColumn} duration={18} />
-          <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={22} />
-          <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={20} />
+          <TestimonialsColumn testimonials={firstColumn} className="w-full md:w-[32%]" duration={18} />
+          <TestimonialsColumn testimonials={secondColumn} className="w-full md:w-[32%] hidden md:block" duration={22} />
+          <TestimonialsColumn testimonials={thirdColumn} className="w-full md:w-[32%] hidden lg:block" duration={20} />
         </div>
       </motion.div>
     </section>

@@ -1,25 +1,58 @@
 import React from "react";
-import { Marquee } from "@/components/ui/Marquee";
 
 export function MarqueeBand() {
-  const platforms = ["Reels", "Shorts", "YouTube", "Instagram", "LinkedIn"];
+  const items = ["Reels", "Shorts", "YouTube", "Instagram", "LinkedIn"];
 
   return (
-    <section data-theme="dark" className="hero-glow py-8 overflow-hidden">
-      <Marquee direction="x" duration={30}>
-        <div className="flex items-center gap-4 md:gap-8 px-4">
-          {platforms.map((platform, index) => (
-            <React.Fragment key={index}>
-              <span className="font-display text-2xl md:text-4xl lg:text-6xl italic text-[var(--color-surface)]">
-                {platform}
-              </span>
-              {index < platforms.length - 1 && (
-                <span className="w-2 w-2 md:w-3 md:h-3 rounded-full bg-[var(--color-accent)]" />
-              )}
-            </React.Fragment>
-          ))}
+    <section data-theme="dark" className="hero-glow py-6 md:py-8 overflow-hidden w-full">
+      <div className="relative overflow-hidden w-full">
+        <div className="marquee-track" style={{ animationDuration: "25s" }}>
+          {/* Loop 1 */}
+          <div className="flex items-center flex-shrink-0 whitespace-nowrap">
+            {items.map((item, index) => (
+              <div key={`l1-${index}`} className="flex items-center">
+                <span className="font-display text-xl md:text-2xl lg:text-3xl italic text-[var(--color-surface)] px-3 md:px-6">
+                  {item}
+                </span>
+                <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[var(--color-accent)] inline-block mx-2" />
+              </div>
+            ))}
+          </div>
+          {/* Loop 2 */}
+          <div className="flex items-center flex-shrink-0 whitespace-nowrap" aria-hidden="true">
+            {items.map((item, index) => (
+              <div key={`l2-${index}`} className="flex items-center">
+                <span className="font-display text-xl md:text-2xl lg:text-3xl italic text-[var(--color-surface)] px-3 md:px-6">
+                  {item}
+                </span>
+                <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[var(--color-accent)] inline-block mx-2" />
+              </div>
+            ))}
+          </div>
+          {/* Loop 3 for wider screens */}
+          <div className="flex items-center flex-shrink-0 whitespace-nowrap" aria-hidden="true">
+            {items.map((item, index) => (
+              <div key={`l3-${index}`} className="flex items-center">
+                <span className="font-display text-xl md:text-2xl lg:text-3xl italic text-[var(--color-surface)] px-3 md:px-6">
+                  {item}
+                </span>
+                <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[var(--color-accent)] inline-block mx-2" />
+              </div>
+            ))}
+          </div>
+          {/* Loop 4 for ultra-wide screens */}
+          <div className="flex items-center flex-shrink-0 whitespace-nowrap" aria-hidden="true">
+            {items.map((item, index) => (
+              <div key={`l4-${index}`} className="flex items-center">
+                <span className="font-display text-xl md:text-2xl lg:text-3xl italic text-[var(--color-surface)] px-3 md:px-6">
+                  {item}
+                </span>
+                <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-[var(--color-accent)] inline-block mx-2" />
+              </div>
+            ))}
+          </div>
         </div>
-      </Marquee>
+      </div>
     </section>
   );
 }

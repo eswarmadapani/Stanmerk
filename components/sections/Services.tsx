@@ -25,8 +25,8 @@ export function Services() {
   const otherServices = services.filter((s) => s.id !== heroService.id);
 
   return (
-    <section id="services" data-theme="dark" className="hero-glow py-24 md:py-32 lg:py-40">
-      <div className="container-x px-6 text-[var(--color-surface)]">
+    <section id="services" data-theme="dark" className="hero-glow py-20 md:py-28 lg:py-32">
+      <div className="container-x px-5 sm:px-6 text-[var(--color-surface)]">
         <Reveal>
           <SectionHeader
             eyebrow="Services"
@@ -43,7 +43,7 @@ export function Services() {
               <CornerDots tone="dark" />
               <div className="grid grid-cols-1 items-start gap-6 md:gap-8 lg:grid-cols-[1.05fr_0.95fr]">
                 {/* Video display - 4:3 ratio */}
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-[var(--color-dark-card)]">
+                <div className="relative aspect-[4/3] w-full max-w-md rounded-xl overflow-hidden bg-[var(--color-dark-card)]">
                   <video 
                     src="https://res.cloudinary.com/dlvgf55ti/video/upload/q_auto/f_auto/Stanmerk_Final_Cut_qafinl.mp4" 
                     autoPlay 
@@ -85,13 +85,14 @@ export function Services() {
                   </Button>
                 </div>
               </div>
+              
               <div className="absolute top-3 md:top-4 right-3 md:right-4 text-3xl md:text-4xl font-display font-semibold text-[var(--color-muted)]/20">
                 01
               </div>
             </div>
 
             {/* Row 2: Three Dark Cards */}
-            <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4">
+            <div className="grid gap-3 md:grid-cols-1 lg:grid-cols-3 md:gap-4">
               {otherServices.map((service) => (
                 <GlowCard
                   key={service.id}
@@ -136,7 +137,7 @@ export function Services() {
             </div>
 
             {/* Row 3: Dark CTA Bar */}
-            <div className="relative bg-[var(--color-ink)] text-[var(--color-surface)] p-4 md:p-6 rounded-[var(--radius-card)] flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">
+            <div className="relative bg-[var(--color-ink)] text-[var(--color-surface)] p-4 md:p-6 rounded-[var(--radius-card)] flex flex-col items-center gap-4 md:flex-row md:items-center md:justify-between md:gap-6">
               <CornerDots tone="dark" />
               <div className="flex items-center gap-3 md:gap-4">
                 <div className="flex -space-x-2">
@@ -148,15 +149,14 @@ export function Services() {
                       {i}
                     </div>
                   ))}
-                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[var(--color-accent)] border-2 border-[var(--color-ink)] flex items-center justify-center text-xs font-medium text-[var(--color-on-accent)]">
-                    +6
-                  </div>
                 </div>
                 <div>
                   <p className="font-display text-base md:text-lg font-semibold">
                     Not sure which fits? <em>Talk to a strategist.</em>
                   </p>
-                  <p className="text-[var(--color-muted)] text-xs md:text-sm">15-min call · zero pitch · free sample edit</p>
+                  <p className="text-[var(--color-muted)] text-xs md:text-sm">
+                    15-min call · zero pitch · free sample edit
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-2 md:gap-3 bg-[var(--color-dark-card)] px-3 md:px-4 py-2 rounded-full">

@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" data-theme="light" className="py-24 md:py-32 lg:py-40 bg-[var(--color-page)]">
-      <div className="container-x px-6">
-        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16 xl:gap-20">
+    <section id="how-it-works" data-theme="light" className="py-20 md:py-28 lg:py-32 bg-[var(--color-page)]">
+      <div className="container-x px-5 sm:px-6">
+        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16 xl:gap-20">
           {/* LEFT COLUMN - Editorial content */}
           <div className="lg:sticky lg:top-28">
             <Reveal>
