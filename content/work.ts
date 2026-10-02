@@ -21,8 +21,8 @@ export const work = {
     {
       title: "Tech Review Channel",
       category: "YouTube Long-form",
-      media: "https://res.cloudinary.com/dlvgf55ti/video/upload/1st_yxid4g.mp4",
-      poster: "/work/tech-review-poster.jpg",
+      media: "https://res.cloudinary.com/dlvgf55ti/video/upload/q_auto/f_auto/1st_yxid4g.mp4",
+      poster: "https://res.cloudinary.com/dlvgf55ti/video/upload/so_3/q_auto/f_auto/1st_yxid4g.jpg",
       platform: "YouTube",
       views: "850K",
       growth: "+320%",
@@ -30,8 +30,8 @@ export const work = {
     {
       title: "Fitness Coach Brand",
       category: "Reels Campaign",
-      media: "https://res.cloudinary.com/dlvgf55ti/video/upload/2nd_xmpnen.mp4",
-      poster: "/work/fitness-poster.jpg",
+      media: "https://res.cloudinary.com/dlvgf55ti/video/upload/q_auto/f_auto/2nd_xmpnen.mp4",
+      poster: "https://res.cloudinary.com/dlvgf55ti/video/upload/so_3/q_auto/f_auto/2nd_xmpnen.jpg",
       platform: "Reels",
       views: "1.2M",
       growth: "+280%",
@@ -39,8 +39,8 @@ export const work = {
     {
       title: "Food Creator Portfolio",
       category: "Shorts Series",
-      media: "https://res.cloudinary.com/dlvgf55ti/video/upload/3rd_h8fphf.mp4",
-      poster: "/work/food-poster.jpg",
+      media: "https://res.cloudinary.com/dlvgf55ti/video/upload/q_auto/f_auto/3rd_h8fphf.mp4",
+      poster: "https://res.cloudinary.com/dlvgf55ti/video/upload/so_3/q_auto/f_auto/3rd_h8fphf.jpg",
       platform: "Shorts",
       views: "680K",
       growth: "+195%",

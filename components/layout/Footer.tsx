@@ -12,7 +12,7 @@ const quickLinks = [
 
 export function Footer() {
   return (
-    <footer data-theme="dark" className="footer-glow mt-16 md:mt-24 border-t border-white/10">
+    <footer data-theme="dark" className="footer-glow mt-16 md:mt-24">
       <div className="container-x px-4 md:px-6 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Column 1: Logo & Social */}

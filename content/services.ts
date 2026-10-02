@@ -18,7 +18,7 @@ export const services = [
     title: "YouTube Long-Form Editing",
     description: "Engaging long-form content with intros, outros, B-roll, and polished storytelling.",
     features: [
-      " cinematic intros and outros",
+      "Cinematic intros and outros",
       "B-roll integration",
       "Color grading and sound design",
       "Thumbnail strategy included",
@@ -29,16 +29,16 @@ export const services = [
   },
   {
     id: 3,
-    title: "Thumbnail & Cover Design",
-    description: "Click-worthy thumbnails that drive views and engagement for your content.",
+    title: "Clipping",
+    description: "Turn long-form content into engaging short-form clips built for social platforms.",
     features: [
-      "High-contrast designs",
-      "Face and emotion focus",
-      "A/B testing variations",
-      "Brand-consistent style",
+      "High-retention clip selection",
+      "Strong hooks and pacing",
+      "Captions and dynamic subtitles",
+      "Reels, Shorts & TikTok formatting",
     ],
     turnaround: "24H",
-    platforms: ["YouTube", "Thumbnails"],
+    platforms: ["Reels", "Shorts"],
     popular: false,
   },
   {

@@ -9,13 +9,13 @@ import { CheckList } from "@/components/ui/CheckList";
 import { PlatformChip } from "@/components/ui/PlatformChip";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
-import { Video, ImageIcon, Layers, MessageSquare, Volume2, VolumeX } from "lucide-react";
+import { Video, Scissors, Layers, MessageSquare, Volume2, VolumeX } from "lucide-react";
 import { GlowCard } from "@/components/ui/spotlight-card";
 
 const serviceIcons = {
   1: Video,
   2: Layers,
-  3: ImageIcon,
+  3: Scissors,
   4: MessageSquare,
 };
 
@@ -45,10 +45,12 @@ export function Services() {
                 {/* Video display - 4:3 ratio */}
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-[var(--color-dark-card)]">
                   <video 
-                    src="https://res.cloudinary.com/dlvgf55ti/video/upload/Stanmerk_Final_Cut_qafinl.mp4" 
+                    src="https://res.cloudinary.com/dlvgf55ti/video/upload/q_auto/f_auto/Stanmerk_Final_Cut_qafinl.mp4" 
                     autoPlay 
                     muted={isMuted} 
                     loop 
+                    playsInline
+                    preload="metadata"
                     className="w-full h-full object-cover"
                   />
                   {/* Audio toggle button */}

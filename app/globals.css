@@ -95,7 +95,7 @@ html {
 
 /* Footer glow */
 .footer-glow {
-  background: radial-gradient(60% 80% at 100% 100%, #3A3B04 0%, #1C1D02 45%, #000 100%);
+  background: #000000;
 }
 
 /* Accordion animations */
@@ -118,7 +118,7 @@ html {
 }
 
 body {
-  background: var(--color-page);
+  background: #000000;
   color: var(--color-ink);
   font-family: var(--font-sans);
 }
